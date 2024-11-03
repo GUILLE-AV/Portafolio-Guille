@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Portafolio</title>
+    <link rel="stylesheet" href="less/main.less" type="text/css">
+</head>
+
+<body>
+    {{> header }}
+
+
+    <main>
+        <div class="container"></div>
+
+        <section class="contacto_form" style="text-align: center;">
+            <h2 id="titulo_contacto">Gracias por comunicarte con el ingeniero Guillermo Agurcia</h2>
+            <form action="https://formsubmit.co/avilaguillermo820@gmail.com" method="POST">
+                <section class="col-6 col-6-m col-4-l">
+                    <label for="txtNombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                    <label for="txtEmail">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Correo" />
+                    <label for="txtTelefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="98765621" />
+                    <label for="txtMensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" style="resize: none;"></textarea>
+                    <button type="submit" id="btnEnviar" name="btnEnviar">Enviar</button>
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Consultorio%20UNICAH/Contactos.html">
+                    <input type="hidden" name="_captchat" value="false">
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+            alert('Formulario enviado exitosamente.');
+            document.querySelector('.contact-form').reset(); // Resetea el formulario
+        }
+    </script>
+</body>
+
+</html>
